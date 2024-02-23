@@ -1,0 +1,20 @@
+<html>
+<head>
+  <title>Polar Bear Tracking</title>
+</head>
+<body>
+ 
+    <h1>Polar Bears Deployed</h1>
+    
+    {% for row in rows %}
+    <p>(Bear {{row["deployment_id"]}} Details):
+        Status ID : {{row["status_id"]}} |
+       Deployment ID : {{row["deployID"]}} |
+      Received : {{row["received"]}} | 
+      Latitude :  {{ row["latitude"]}} | 
+      Longitude : {{row['longitude']}}	| 
+      Temperature : {{row["temperature"]}} |
+    </p>
+    {% endfor %}
+</body>
+</html>
